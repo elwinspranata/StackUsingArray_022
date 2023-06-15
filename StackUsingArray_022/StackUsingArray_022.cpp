@@ -12,6 +12,11 @@ public:
 	program() {
 		top = -1;
 	}
-
+	string push(string element) {
+		if (top == 4) {
+			cout << "stack full" << endl;
+			return "";
+		}
+	}
 };
 
