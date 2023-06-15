@@ -40,35 +40,29 @@ public:
 	bool empty() {
 		return (top == -1);
 	}
-		void display() {
-			if (empty()) {
+	void display() {
+		if (empty()) {
 				cout << "\nStack is empty." << endl;
-			}
-			else {
-				for (int tmp = top; tmp >= 0; tmp--) {
-					cout << stack_array[tmp] << endl;
-				}
+		}
+		else {
+			for (int tmp = top; tmp >= 0; tmp--) {
+				cout << stack_array[tmp] << endl;
 			}
 		}
-	};
+	}
+};
 
 int main() {
 	program s;
 
 	while (true) {
-		cout << endl;
-		cout << "\n***stack Menu***\n";
 		cout << "1. push\n";
 		cout << "2. pop\n";
 		cout << "3. Display\n";
 		cout << "4. Exit\n";
 		cout << "\nEnter your choice: ";
 		string input;
-		cout << "1. push\n";
-		cout << "2. pop\n";
-		cout << "3. Display\n";
-		cout << "4. Exit\n";
-		cout << "\nEnter your choice: ";
+		getline(cin, input);
 		char ch = (input.empty() ? '0' : input[0]);
 		switch (ch) {
 		case '1': {
